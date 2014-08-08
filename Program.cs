@@ -13,9 +13,6 @@ namespace ClickOnce_Open_File_Location
         [STAThread]
         static void Main(string[] args)
         {
-            args = new string[1];
-            args[0] = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\test.lnk";
-
             if (args.Length > 0)
             {
                 string filePath = args[0];

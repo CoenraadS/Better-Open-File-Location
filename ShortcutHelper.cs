@@ -16,7 +16,7 @@
 
 using System.IO;
 
-namespace Deep_File_Location_Finder
+namespace ClickOnce_Open_File_Location
 {
     public static class ShortcutHelper
     {

@@ -2,7 +2,7 @@
 using System.IO;
 using System.Collections.Generic;
 
-namespace Deep_File_Location_Finder
+namespace ClickOnce_Open_File_Location
 {
     static class Program
     {
@@ -14,11 +14,11 @@ namespace Deep_File_Location_Finder
         {
             if (args.Length > 0)
             {
-                string location = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\GitHub.appref-ms";
+                string filePath = args[0];
 
-                if (ShortcutHelper.IsShortcut(location))
+                if (ShortcutHelper.IsShortcut(filePath))
                 {
-                    location = ShortcutHelper.ResolveShortcut(location);
+                    string location = ShortcutHelper.ResolveShortcut(filePath);
                     location = Path.GetDirectoryName(location);
                     System.Diagnostics.Process.Start(location);
                 }

@@ -26,12 +26,12 @@ namespace ClickOnce_Open_File_Location.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool ShortCut {
+        public bool Shortcut {
             get {
-                return ((bool)(this["ShortCut"]));
+                return ((bool)(this["Shortcut"]));
             }
             set {
-                this["ShortCut"] = value;
+                this["Shortcut"] = value;
             }
         }
         
@@ -44,30 +44,6 @@ namespace ClickOnce_Open_File_Location.Properties {
             }
             set {
                 this["ClickOnce"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool ShiftShortCut {
-            get {
-                return ((bool)(this["ShiftShortCut"]));
-            }
-            set {
-                this["ShiftShortCut"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool ShiftClickOnce {
-            get {
-                return ((bool)(this["ShiftClickOnce"]));
-            }
-            set {
-                this["ShiftClickOnce"] = value;
             }
         }
     }

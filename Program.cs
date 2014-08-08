@@ -2,6 +2,7 @@
 using System.IO;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace ClickOnce_Open_File_Location
 {
@@ -13,13 +14,20 @@ namespace ClickOnce_Open_File_Location
         [STAThread]
         static void Main(string[] args)
         {
+            args = new string[1];
+            args[0] = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\GitHub.appref-ms";
+
             if (args.Length > 0)
             {
                 string filePath = args[0];
 
                 string location = ShortcutHelper.ResolveShortcut(filePath);
-                location = Path.GetDirectoryName(location);
-                System.Diagnostics.Process.Start(location);
+
+                ProcessStartInfo explorer = new ProcessStartInfo();
+                explorer.FileName = ("Explorer.exe");
+                explorer.Arguments = (@"/select," + location);
+
+                Process.Start(explorer);
             }
             else
             {

@@ -19,33 +19,10 @@ using System.IO;
 namespace ClickOnce_Open_File_Location
 {
     public static class ShortcutHelper
-    {
-        public static bool IsShortcut(string path)
-        {
-            if (!File.Exists(path))
-            {
-                return false;
-            }
-
-            string directory = Path.GetDirectoryName(path);
-            string file = Path.GetFileName(path);
-
-            Shell32.Shell shell = new Shell32.Shell();
-            Shell32.Folder folder = shell.NameSpace(directory);
-            Shell32.FolderItem folderItem = folder.ParseName(file);
-
-            if (folderItem != null)
-            {
-                return folderItem.IsLink;
-            }
-
-            return false;
-        }
+    {        
 
         public static string ResolveShortcut(string path)
         {
-            if (IsShortcut(path))
-            {
                 string directory = Path.GetDirectoryName(path);
                 string file = Path.GetFileName(path);
 
@@ -54,9 +31,7 @@ namespace ClickOnce_Open_File_Location
                 Shell32.FolderItem folderItem = folder.ParseName(file);
 
                 Shell32.ShellLinkObject link = (Shell32.ShellLinkObject)folderItem.GetLink;
-                return link.Path;
-            }
-            return string.Empty;
+                return link.Path;            
         }
     }
 }

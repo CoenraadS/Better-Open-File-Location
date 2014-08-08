@@ -13,19 +13,16 @@ namespace ClickOnce_Open_File_Location
         [STAThread]
         static void Main(string[] args)
         {
-            //args = new string[1];
-            //args[0] = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\Visual Studio 2012.lnk";
+            args = new string[1];
+            args[0] = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\test.lnk";
 
             if (args.Length > 0)
             {
                 string filePath = args[0];
 
-                if (ShortcutHelper.IsShortcut(filePath))
-                {
-                    string location = ShortcutHelper.ResolveShortcut(filePath);
-                    location = Path.GetDirectoryName(location);
-                    System.Diagnostics.Process.Start(location);
-                }
+                string location = ShortcutHelper.ResolveShortcut(filePath);
+                location = Path.GetDirectoryName(location);
+                System.Diagnostics.Process.Start(location);
             }
             else
             {

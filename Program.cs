@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 using System.Diagnostics;
 
-namespace ClickOnce_Open_File_Location
+namespace Better_Open_File_Location
 {
     static class Program
     {
@@ -14,9 +14,6 @@ namespace ClickOnce_Open_File_Location
         [STAThread]
         static void Main(string[] args)
         {
-            args = new string[1];
-            args[0] = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\GitHub.appref-ms";
-
             if (args.Length > 0)
             {
                 string filePath = args[0];

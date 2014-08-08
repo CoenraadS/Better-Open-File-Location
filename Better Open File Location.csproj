@@ -7,8 +7,8 @@
     <ProjectGuid>{69BDC432-04A3-4469-AE85-E47293184737}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ClickOnce_Open_File_Location</RootNamespace>
-    <AssemblyName>ClickOnce Open File Location</AssemblyName>
+    <RootNamespace>Better_Open_File_Location</RootNamespace>
+    <AssemblyName>Better Open File Location</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

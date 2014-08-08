@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ClickOnce_Open_File_Location.Properties {
+namespace Better_Open_File_Location.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

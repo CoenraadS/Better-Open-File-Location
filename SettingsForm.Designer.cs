@@ -1,4 +1,4 @@
-﻿namespace ClickOnce_Open_File_Location
+﻿namespace Better_Open_File_Location
 {
     partial class SettingsForm
     {

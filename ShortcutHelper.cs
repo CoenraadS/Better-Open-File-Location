@@ -2,7 +2,7 @@
 using System.IO;
 using IWshRuntimeLibrary;
 
-namespace ClickOnce_Open_File_Location
+namespace Better_Open_File_Location
 {
     public static class ShortcutHelper
     {

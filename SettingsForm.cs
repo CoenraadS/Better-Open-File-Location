@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Win32;
 
-namespace ClickOnce_Open_File_Location
+namespace Better_Open_File_Location
 {
     public partial class SettingsForm : Form
     {
